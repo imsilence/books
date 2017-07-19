@@ -1,0 +1,2 @@
+<?
+echo('allow url include');
