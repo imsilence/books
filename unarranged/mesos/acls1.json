@@ -1,0 +1,72 @@
+{
+    "register_frameworks" : [
+        {
+            "principals" : {
+                "values" : ["marathon_user"]
+            },
+            "roles" : {
+                "values" : ["marathon_role"]
+            }
+        },
+        {
+            "principals" : {
+                "values" : ["marathon_user"]
+            },
+            "roles" : {
+                "type" : "NONE"
+            }
+        },
+        {
+            "principals" : {
+                "type" : "NONE"
+            },
+            "roles" : {
+                "values" : ["marathon_role"]
+            }
+        }
+    ],
+    "run_tasks" : [
+        {
+            "principals" : {
+                "values" : ["marathon_user"]
+            },
+            "users" : {
+                "values" : ["root"]
+            }
+        },
+        {
+            "principals" : {
+                "values" : ["marathon_user"]
+            },
+            "users" : {
+                "type" : "NONE"
+            }
+        },
+        {
+            "principals" : {
+                "type" : "NONE"
+            },
+            "users" : {
+                "values" : ["root"]
+            }
+        }
+    ],
+    "shutdown_frameworks" : [
+        {
+            "principals": {
+                "values": ["framework_user"]
+            },
+            "framework_principals": {
+                "type": "ANY"
+            }
+        },
+        {
+            "principals": {
+                "type": "NONE"
+            },
+            "framework_principals": {
+                "type": "NONE"
+            }
+        }
+    ]
+}

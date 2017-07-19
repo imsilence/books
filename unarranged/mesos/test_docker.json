@@ -1,0 +1,16 @@
+{
+  "id": "test-1",
+  "cmd": "python3 -m http.server 8080",
+  "cpus": 0.5,
+  "mem": 32.0,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "index.alauda.cn/alauda/ubuntu:latest",
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 8080, "hostPort": 0 }
+      ]
+    }
+  }
+}

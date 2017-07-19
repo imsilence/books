@@ -1,0 +1,41 @@
+{
+    "permissive" : false,
+    "register_frameworks" : [
+        {
+            "principals" : {
+                "values" : ["marathon_user"]
+            },
+            "roles" : {
+                "values" : ["marathon_role"]
+            }
+        },
+        {
+            "principals" : {
+                "values" : ["chronos_user"]
+            },
+            "roles" : {
+                "values" : ["chronos_role"]
+            }
+        }
+    ],
+    "run_tasks" : [
+        {
+            "principals" : {
+                "values" : ["marathon_user", "chronos_user"]
+            },
+            "users" : {
+                "values" : ["root"]
+            }
+        }
+    ],
+    "shutdown_frameworks" : [
+        {
+            "principals": {
+                "values": ["framework_user"]
+            },
+            "framework_principals": {
+                "type": "ANY"
+            }
+        }
+    ]
+}
