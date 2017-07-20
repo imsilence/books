@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>xss charset</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            window.name = '08.html';
+            alert(document.domain + ':' + window.name);
+            window.location.replace('http://localhost:9999/09.html');
+        </script>
+    </body>
+</html>

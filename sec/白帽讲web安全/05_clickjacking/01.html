@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>click jacking</title>
+        <style type="text/css">
+            iframe {
+                width: 900px;
+                height: 250px;
+
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                z-index: 2;
+
+                -moz-opacity: 0.5;
+                opacity: 0.5;
+                filter:alpha(opacity=0);
+            }
+
+            button {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                z-index: 1;
+                width:120px;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe src="02.html" scrolling="no"></iframe>
+        <button>click</button>
+    </body>
+</html>

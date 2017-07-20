@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>xss charset</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            alert(document.domain + ':' + window.name);
+        </script>
+    </body>
+</html>
